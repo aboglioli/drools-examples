@@ -1,6 +1,6 @@
 package com.sample.rules
  
-import com.sample.DroolsTest.Message;
+import com.sample.Example.Message;
  
 rule "Hello World"
     when

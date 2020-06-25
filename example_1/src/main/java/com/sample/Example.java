@@ -1,27 +1,35 @@
 package com.sample;
 
 import org.kie.api.KieServices;
+import org.kie.api.logger.KieRuntimeLogger;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
+import org.drools.core.event.DebugAgendaEventListener;
+import org.drools.core.event.DebugRuleRuntimeEventListener;
 
-/**
- * This is a sample class to launch a rule.
- */
-public class DroolsTest {
+public class Example {
 
     public static final void main(String[] args) {
         try {
-            // load up the knowledge base
 	        KieServices ks = KieServices.Factory.get();
     	    KieContainer kContainer = ks.getKieClasspathContainer();
         	KieSession kSession = kContainer.newKieSession("ksession-rules");
+        	
+        	kSession.addEventListener(new DebugAgendaEventListener());
+        	kSession.addEventListener(new DebugRuleRuntimeEventListener());
+        	
+        	KieRuntimeLogger logger = ks.getLoggers().newFileLogger(kSession, "./logs");
 
-            // go !
             Message message = new Message();
             message.setMessage("Hello World");
             message.setStatus(Message.HELLO);
+            
             kSession.insert(message);
+            
             kSession.fireAllRules();
+            
+            kSession.dispose();
+            logger.close();
         } catch (Throwable t) {
             t.printStackTrace();
         }
