@@ -1,0 +1,90 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>com.entidades.Recepcion@64bc21ac</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>2</factId>
+      <objectToString>com.entidades.Paciente@2cab9998</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Descuento OS OSEP [1]</activationId>
+      <rule>Descuento OS OSEP</rule>
+      <declarations>r=com.entidades.Recepcion@64bc21ac</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Importe Zona Tunuyan [1]</activationId>
+      <rule>Importe Zona Tunuyan</rule>
+      <declarations>myDespacho=com.entidades.Despacho@1601e47</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Adulto [2]</activationId>
+      <rule>Adulto</rule>
+      <declarations>p=com.entidades.Paciente@2cab9998; myEdad=30</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Adulto [2]</activationId>
+      <rule>Adulto</rule>
+      <declarations>p=com.entidades.Paciente@2cab9998; myEdad=30</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>2</factId>
+      <objectToString>com.entidades.Paciente@2cab9998</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Adulto [2]</activationId>
+      <rule>Adulto</rule>
+      <declarations>p=com.entidades.Paciente@2cab9998; myEdad=30</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Descuento OS OSEP [1]</activationId>
+      <rule>Descuento OS OSEP</rule>
+      <declarations>r=com.entidades.Recepcion@64bc21ac</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>com.entidades.Recepcion@64bc21ac</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Descuento OS OSEP [1]</activationId>
+      <rule>Descuento OS OSEP</rule>
+      <declarations>r=com.entidades.Recepcion@64bc21ac</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Importe Zona Tunuyan [1]</activationId>
+      <rule>Importe Zona Tunuyan</rule>
+      <declarations>myDespacho=com.entidades.Despacho@1601e47</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Importe Zona Tunuyan [1]</activationId>
+      <rule>Importe Zona Tunuyan</rule>
+      <declarations>myDespacho=com.entidades.Despacho@1601e47</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+  </events>
+</org.drools.core.audit.WorkingMemoryLog>
+</object-stream>

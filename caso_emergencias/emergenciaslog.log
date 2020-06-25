@@ -1,0 +1,144 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>com.entidades.Paciente@1cb3ec38</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>2</factId>
+      <objectToString>com.entidades.Recepcion@5118388b</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Adulto [1]</activationId>
+      <rule>Adulto</rule>
+      <declarations>p=com.entidades.Paciente@1cb3ec38; myEdad=84</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Descuento OS PAMI [2]</activationId>
+      <rule>Descuento OS PAMI</rule>
+      <declarations>r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Prioridad Codigo AMARILLO [2]</activationId>
+      <rule>Prioridad Codigo AMARILLO</rule>
+      <declarations>r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Prioridad Codigo AMARILLO paciente Anciano [2]</activationId>
+      <rule>Prioridad Codigo AMARILLO paciente Anciano</rule>
+      <declarations>r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Importe Zona Tunuyan [2]</activationId>
+      <rule>Importe Zona Tunuyan</rule>
+      <declarations>myDespacho=com.entidades.Despacho@1950e8a6</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Adulto [1]</activationId>
+      <rule>Adulto</rule>
+      <declarations>p=com.entidades.Paciente@1cb3ec38; myEdad=84</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>com.entidades.Paciente@1cb3ec38</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Adulto [1]</activationId>
+      <rule>Adulto</rule>
+      <declarations>p=com.entidades.Paciente@1cb3ec38; myEdad=84</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Prioridad Codigo AMARILLO paciente Anciano [2]</activationId>
+      <rule>Prioridad Codigo AMARILLO paciente Anciano</rule>
+      <declarations>r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>2</factId>
+      <objectToString>com.entidades.Recepcion@5118388b</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Prioridad Codigo AMARILLO paciente Anciano [2]</activationId>
+      <rule>Prioridad Codigo AMARILLO paciente Anciano</rule>
+      <declarations>r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>5</type>
+      <activationId>Prioridad Codigo AMARILLO [2]</activationId>
+      <rule>Prioridad Codigo AMARILLO</rule>
+      <declarations>r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Descuento Codigo ROJO y OS PAMI [2, 1]</activationId>
+      <rule>Descuento Codigo ROJO y OS PAMI</rule>
+      <declarations>p=com.entidades.Paciente@1cb3ec38; r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Descuento Codigo ROJO y OS PAMI [2, 1]</activationId>
+      <rule>Descuento Codigo ROJO y OS PAMI</rule>
+      <declarations>p=com.entidades.Paciente@1cb3ec38; r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>2</factId>
+      <objectToString>com.entidades.Recepcion@5118388b</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Descuento Codigo ROJO y OS PAMI [2, 1]</activationId>
+      <rule>Descuento Codigo ROJO y OS PAMI</rule>
+      <declarations>p=com.entidades.Paciente@1cb3ec38; r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2,1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>5</type>
+      <activationId>Descuento OS PAMI [2]</activationId>
+      <rule>Descuento OS PAMI</rule>
+      <declarations>r=com.entidades.Recepcion@5118388b</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Importe Zona Tunuyan [2]</activationId>
+      <rule>Importe Zona Tunuyan</rule>
+      <declarations>myDespacho=com.entidades.Despacho@1950e8a6</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Importe Zona Tunuyan [2]</activationId>
+      <rule>Importe Zona Tunuyan</rule>
+      <declarations>myDespacho=com.entidades.Despacho@1950e8a6</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+  </events>
+</org.drools.core.audit.WorkingMemoryLog>
+</object-stream>

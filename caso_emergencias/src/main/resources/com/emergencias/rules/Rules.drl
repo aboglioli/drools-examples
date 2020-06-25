@@ -1,0 +1,99 @@
+package com.emergencias.rules
+import com.entidades.*;
+
+rule "Adulto"
+	salience 200	
+    when
+        p : Paciente( edad > 18, myEdad : edad )
+    then
+        System.out.println( "Paciente Adulto. Edad: "+ myEdad );
+        p.setAdulto(true);
+        update( p );
+end
+
+rule "Descuento OS OSEP"
+    when
+        r: Recepcion(	paciente.getOS().getNombre() == "OSEP" && 
+        				getDespacho().getDescuento() == (float)0)
+        
+    then
+    	r.getDespacho().setDescuento((float)0.5);
+    	update(r)
+        System.out.println( "OS OSEP. Descuento: 50%" );
+end
+
+
+rule "Descuento OS PAMI"
+    when
+        r: Recepcion(	paciente.getOS().getNombre() == "PAMI" &&
+						getDespacho().getDescuento() == (float)0)
+        
+    then
+    	r.getDespacho().setDescuento((float)0.3);
+    	update(r)
+        System.out.println( "OS PAMI. Descuento: 30%" );
+end
+
+rule "Descuento Codigo ROJO y OS PAMI"
+	salience 10	
+	when
+		r: Recepcion( 
+				getCodigo().getCodigo() == Codigo.ROJO &&
+				getDespacho().getDescuento() == (float)0
+				) 
+		p: Paciente( getOS().getNombre() == "PAMI" )
+	then
+		r.getDespacho().setDescuento((float)0.6);
+		update(r)
+        System.out.println( "Urgencia Máxima y OS PAMI. Descuento: 60%" );	
+end
+
+
+rule "Prioridad Codigo AMARILLO"
+	when
+		r: Recepcion( getCodigo().getCodigo() == Codigo.AMARILLO)
+	then
+		r.setPrioridad(2);
+		System.out.println( "Prioridad Urgente 1: Codigo Amarillo " );	
+end
+
+
+rule "Prioridad Codigo AMARILLO paciente Anciano"
+	salience 100	
+	when
+		r: Recepcion( getCodigo().getCodigo() == Codigo.AMARILLO && 
+		paciente.getEdad() > 60)
+	then
+		r.setPrioridad(1);
+		r.setCodigo( new Codigo( Codigo.ROJO ) );
+		update( r );
+		System.out.println( "Prioridad ANCIANO Amarrilla 2 a Máxima 1: Codigo Rojo" );	
+end
+
+
+rule "Importe Zona San Carlos"
+	when
+		Recepcion( zona.getNombre() == "San Carlos", myDespacho : despacho)
+		
+	then
+		myDespacho.setImporteZona((float)50);
+		System.out.println( "Zona San Carlos. Importe traslado: "+ 50 );	
+end
+
+rule "Importe Zona Tupungato"
+	when
+		Recepcion( zona.getNombre() == "Tupungato", myDespacho : despacho)
+		
+	then
+		myDespacho.setImporteZona((float)100);
+		System.out.println( "Zona San Carlos. Importe traslado: "+ 100 );	
+end
+
+rule "Importe Zona Tunuyan"
+	when
+		Recepcion( zona.getNombre() == "Tunuyan", myDespacho : despacho)
+		
+	then
+		myDespacho.setImporteZona((float)150);
+		System.out.println( "Zona Tunuyan. Importe traslado: "+ 150 );	
+end
