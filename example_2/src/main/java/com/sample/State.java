@@ -1,5 +1,6 @@
 package com.sample;
 
+import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 public class State {
@@ -24,10 +25,20 @@ public class State {
 		return state;
 	}
 	public void setState(int state) {
+		int oldState = this.state;
 		this.state = state;
+		this.changes.firePropertyChange("state", oldState, state);
 	}
 	
 	public String toString() {
 		return this.name + "[" + this.state + "]";
 	}
+	
+    public void addPropertyChangeListener(final PropertyChangeListener l) {
+        this.changes.addPropertyChangeListener( l );
+    }
+
+    public void removePropertyChangeListener(final PropertyChangeListener l) {
+        this.changes.removePropertyChangeListener( l );
+    }
 }

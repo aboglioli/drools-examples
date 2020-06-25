@@ -2,13 +2,17 @@ package com.sample.rules
  
 import com.sample.State;
 
+declare type State
+	@propertyChangeSupport
+end
+
 rule "Bootstrap"
 	when
 		a: State(name == "A", state == State.NOTRUN)
 	then
 		System.out.println(a.getName() + " finished");
 		a.setState(State.FINISHED);
-		update(a);
+		// update(a);
 end
 		
 rule "A to B"
@@ -18,7 +22,7 @@ rule "A to B"
 	then
 		System.out.println(b.getName() + " finished");
 		b.setState(State.FINISHED);
-		update(b);
+		// update(b);
 end
  
 rule "B to C"
@@ -28,7 +32,7 @@ rule "B to C"
 	then
 		System.out.println(c.getName() + " finished");
 		c.setState(State.FINISHED);
-		update(c);
+		// update(c);
 end
 		
 rule "B to D"
@@ -39,5 +43,5 @@ rule "B to D"
 	then
 		System.out.println(d.getName() + " finished");
 		d.setState(State.FINISHED);
-		update(d);
+		// update(d);
 end
